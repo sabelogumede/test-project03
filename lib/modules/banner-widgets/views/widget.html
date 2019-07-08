@@ -1,10 +1,12 @@
 
-<div class="main-content">
+<div class="banner-widget {{data.widget.bg_color}}">
     <!-- <div class="{{data.widget.bgcolor}}"> -->
     <h1>{{ data.widget.heading }}</h1>
     <p>{{ data.widget.subheading }}</p>
-    <a href="{{ data.widget.email }}">{{ data.widget.label }}</a>
-    <a href="{{ data.widget.url }}">{{ data.widget.label }}</a>
-    <img>
+    <!-- buttons -->
+    <a href="{{ data.widget.cta_button_1_url }}">{{ data.widget.cta_button_1_label }}</a>
+    <a href="{{ data.widget.cta_button_2_url }}">{{ data.widget.cta_button_2_label }}</a>
+    
+    <img src="{{ apos.attachments.url(data.widget._image.attachment, { size: data.options.size or 'full' }) }}" srcset="{{ apos.images.srcset(data.widget._image.attachment) }}" sizes="{{ data.options.sizesAttr or '100vw' }}" alt="{{ data.widget._image.description or data.widget._image.title }}">
     <!-- <h4><a href="{{ data.widget.url }}">{{ data.widget.label }}</a></h4> -->
 </div>
